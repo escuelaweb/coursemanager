@@ -1,6 +1,6 @@
 <?php
 
-class RolesController extends \BaseController {
+class CoursedatesController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.

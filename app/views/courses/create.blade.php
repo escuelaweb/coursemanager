@@ -1,0 +1,1 @@
+/var/www/avant-garde/app/views/courses/create.blade.php
