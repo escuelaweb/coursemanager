@@ -5,16 +5,22 @@ use Faker\Factory as Faker;
 
 class RolesTableSeeder extends Seeder {
 
-	public function run()
-	{
-		$faker = Faker::create();
+	public function run() {
+		Role::create([
+			'name'		=> 'Administrator',
+			'label'		=> 'admin'
+		]);
 
-		foreach(range(1, 10) as $index)
-		{
-			Role::create([
+		Role::create([
+			'name'		=> 'Instructor',
+			'label'		=> 'instructor'
+		]);
 
-			]);
-		}
+		Role::create([
+			'name'		=> 'Student',
+			'label'		=> 'student'
+		]);		
+
 	}
 
 }
