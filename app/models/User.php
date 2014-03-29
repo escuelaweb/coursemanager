@@ -2,8 +2,9 @@
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use LaravelBook\Ardent\Ardent;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends Ardent implements UserInterface, RemindableInterface {
 
 	/**
 	 * The database table used by the model.
@@ -18,6 +19,25 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password');
+
+	/************************************************************/
+	/*											Ardent Attributes 									*/
+	/************************************************************/
+	public static $rules									= array(
+			'first_name'						=> 'required',
+			'last_name'							=> 'required',
+			'email'									=> 'required|email|unique:users,email',
+			'rut'										=> 'required|unique:users,rut',
+			'password'							=> 'required',
+			'password_confirmation'	=> 'same:password',
+			'birthday'							=> 'required|date'
+		);
+
+	public static $passwordAttributes 		= array('password');
+
+	public $autoPurgeRedundantAttributes	= true;	
+  
+  public $autoHashPasswordAttributes 		= true;	
 
 	/**
 	 * Get the unique identifier for the user.
@@ -47,6 +67,18 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function getReminderEmail()
 	{
 		return $this->email;
+	}
+
+	public function roles() {
+		return $this->belongsToMany('Role');
+	}
+
+	public function courseDatesAsStudent() {
+		return $this->hasMany('CoursedateUser');
+	}
+
+	public function courseDatesAsInstructor() {
+		return $this->hasMany('Coursedate', 'instructor_id');
 	}
 
 }
