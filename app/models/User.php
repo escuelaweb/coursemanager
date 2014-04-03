@@ -20,23 +20,40 @@ class User extends Ardent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
-	/************************************************************/
-	/*											Ardent Attributes 									*/
-	/************************************************************/
-	public static $rules									= array(
-			'first_name'						=> 'required',
-			'last_name'							=> 'required',
-			'email'									=> 'required|email|unique:users,email',
-			'rut'										=> 'required|unique:users,rut',
+	/**
+	 * Ardent validation rules
+	 *
+	 * @var array
+	 */
+	public static $rules	= array(
+			'first_name'						=> 'required|max:120',
+			'last_name'							=> 'required|max:120',
+			'email'									=> 'required|max:255|email|unique:users,email',
+			'rut'										=> 'required|max:12|unique:users,rut',
 			'password'							=> 'required',
 			'password_confirmation'	=> 'same:password',
 			'birthday'							=> 'required|date'
 		);
 
+	/**
+	* Ardent hashed attributes
+	*
+	* @var array
+	*/
 	public static $passwordAttributes 		= array('password');
 
+	/**
+	* Ardent purge redundant attributes
+	*
+	* @var bool
+	*/
 	public $autoPurgeRedundantAttributes	= true;	
-  
+
+	/**
+	* Ardent automatically hash secure attrbiutes
+	*
+	* @var bool
+	*/  
   public $autoHashPasswordAttributes 		= true;	
 
 	/**
