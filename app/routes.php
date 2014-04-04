@@ -13,7 +13,11 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	echo App::environment();
 });
 
 Route::resource('roles', 'RolesController');
+Route::resource('users', 'UsersController');
+Route::resource('classrooms', 'ClassroomsController');
+Route::resource('courses', 'CoursesController');
+Route::resource('coursedates', 'CoursedatesController');
