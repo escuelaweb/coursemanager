@@ -79,3 +79,15 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+
+/*
+|--------------------------------------------------------------------------
+| Registering custom AvantValidator
+|--------------------------------------------------------------------------
+*/
+
+Validator::resolver(function($translator, $data, $rules, $messages)
+{
+    return new AvantValidator($translator, $data, $rules, $messages);
+});
