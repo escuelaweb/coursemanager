@@ -11,7 +11,7 @@ class UsersTableSeeder extends Seeder {
 		'first_name'							=> 'Leonardo',
 		'last_name'								=> 'Graterol',
 		'email'										=> 'pankas87@gmail.com',
-		'rut'											=> 'rut de prueba',
+		'rut'											=> '48170393-K',
 		'password'								=> '12345678',
 		'birthday'								=> '1987-10-31'
 	]);
@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder {
 			'first_name'						=> $faker->firstName,
 			'last_name'							=> $faker->lastName,
 			'email'									=> $faker->email,
-			'rut'										=> 'rut de prueba',
+			'rut'										=> '30686957-X',
 			'password'							=> '12345678',
 			'birthday'							=> $faker->date('Y-m-d', '-10 years')
 		]);
