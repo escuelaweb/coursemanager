@@ -12,7 +12,7 @@ class CoursedateUserStatus extends Ardent {
 	 */
 	public static $rules	= array(
 		'title'				=> 'required|max:50',
-		'label'				=> 'required|max:50|unique',
+		'label'				=> 'required|max:50|unique:coursedate_user_statuses,label',
 		'description'	=> 'required'
 	);	
 
