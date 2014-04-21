@@ -90,11 +90,13 @@ class User extends Ardent implements UserInterface, RemindableInterface {
 		return $this->belongsToMany('Role');
 	}
 
-	public function courseDatesAsStudent() {
+	public function courseDatesAsStudent()
+	{
 		return $this->hasMany('CoursedateUser');
 	}
 
-	public function courseDatesAsInstructor() {
+	public function courseDatesAsInstructor()
+	{
 		return $this->hasMany('Coursedate', 'instructor_id');
 	}
 
