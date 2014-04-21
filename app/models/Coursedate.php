@@ -11,7 +11,7 @@ class Coursedate extends Ardent {
 	 * @var array
 	 */
 	public static $rules	= array(
-		'course_id'			=> 'required|integer|exists:course,id',
+		'course_id'			=> 'required|integer|exists:courses,id',
 		'classroom_id'	=> 'required|integer|exists:classrooms,id',
 		'instructor_id'	=> 'required|integer|exists:users,id',
 		'start_date'		=> 'required|date|after:-1 day',
