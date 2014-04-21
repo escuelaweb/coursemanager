@@ -29,7 +29,7 @@ class User extends Ardent implements UserInterface, RemindableInterface {
 			'first_name'						=> 'required|max:120',
 			'last_name'							=> 'required|max:120',
 			'email'									=> 'required|max:255|email|unique:users,email',
-			'rut'										=> 'required|max:12|unique:users,rut',
+			'rut'										=> 'required|max:12|unique:users,rut|rut',
 			'password'							=> 'required',
 			'password_confirmation'	=> 'same:password',
 			'birthday'							=> 'required|date'
@@ -98,4 +98,10 @@ class User extends Ardent implements UserInterface, RemindableInterface {
 		return $this->hasMany('Coursedate', 'instructor_id');
 	}
 
+	public function beforeValidate()
+	{
+		$this->rut = str_replace('.', '', $this->rut);
+
+		return true;
+	}
 }
