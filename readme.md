@@ -1,12 +1,14 @@
-### Gestor de cursos, inscripciones, aulas y alumnos
+## Course manager for a development academy
 
-Proyecto de muestra desarrollado con Laravel, AngularJS y Bootstrap
+Sample project developed with Laravel 4, AngularJS and Bootstrap.
 
-## Desarrollado por:
+It's a system for managing courses, students, classrooms, coursedates and inscriptions
+
+### Developed by:
 
 Leonardo Graterol 
 
-[Leonardo Graterol's Twitter](http://twitter.com/pankas87)
-[Leonardo Graterol's Github](https://github.com/pankas87)
+[Follow me on Twitter](http://twitter.com/pankas87)  
+[Check out my Github](https://github.com/pankas87)  
 
 
