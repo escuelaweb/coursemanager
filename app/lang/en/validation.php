@@ -80,7 +80,12 @@ return array(
 	|
 	*/
 
-	'custom' => array(),
+	'custom' => array(
+		'rut'	=> array(
+			'rut'	=> ':attribute is not valid'
+		)
+		
+	),
 
 	/*
 	|--------------------------------------------------------------------------
