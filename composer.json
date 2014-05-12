@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.1.*",
 		"way/generators": "2.*",
-		"laravelbook/ardent": "dev-master"
+		"laravelbook/ardent": "dev-master",
+		"fzaninotto/faker": "1.4.*@dev"
 	},
 	"autoload": {
 		"classmap": [
