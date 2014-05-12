@@ -2,7 +2,7 @@
 
 return array(
 
-	'default' => 'mysql',
+	'default' => 'pgsql',
 	
 	'connections' => array(
 		'mysql' => array(
@@ -15,5 +15,15 @@ return array(
 			'collation' => 'utf8_spanish_ci',
 			'prefix'    => '',
 		),
+		'pgsql' => array(
+			'driver'   => 'pgsql',
+			'host'     => 'localhost',
+			'database' => 'dev_academy',
+			'username' => 'postgres',
+			'password' => 'postlecitos',
+			'charset'  => 'utf8',
+			'prefix'   => '',
+			'schema'   => 'public',
+		),		
 	),
 );
