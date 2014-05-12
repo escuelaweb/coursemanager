@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('leonardo-VirtualBox'),
+	'local' => array('leonardo-VirtualBox', 'el-hierro'),
 
 ));
 
