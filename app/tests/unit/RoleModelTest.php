@@ -79,9 +79,9 @@ class RoleModelTest extends TestCase {
 
 		$this->assertTrue($role->delete());			
 
-		foreach(Role::all() as $hay)
+		foreach(Role::all() as $role)
 		{
-			if($hay->id == 1)
+			if($role->id == 1)
 			{
 				$found = true;
 				break;
@@ -90,5 +90,4 @@ class RoleModelTest extends TestCase {
 		
 		$this->assertFalse($found);
 	}
-
 }
