@@ -28,10 +28,20 @@ class UsersTableSeeder extends Seeder {
 		'23845767-K',
 		'23845768-8',
 		'23845769-6',
-		'23845770-K'
+		'23845770-K',
+		'8393535-9',
+		'12333676-3',
+		'8689681-8',
+		'6652413-2',
+		'17075501-4',
+		'21081173-7',
+		'15248540-9',
+		'18736267-9',
+		'5089613-7',
+		'2737875-1',
 	);
 
-	foreach(range(1, 10) as $key => $index) {
+	foreach(range(1, 20) as $key => $index) {
 		User::create([
 			'first_name'						=> $faker->firstName,
 			'last_name'							=> $faker->lastName,

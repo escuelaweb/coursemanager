@@ -21,7 +21,7 @@ class CoursedatesTableSeeder extends Seeder {
 			$coursedate->classroom_id		= $classroom->id;
 			$coursedate->start_date 		= '2014-05-20';
 			$coursedate->end_date 			= '2014-07-12';
-			$coursedate->quorum 				= 7;
+			$coursedate->quorum 				= 10;
 
 			$instructor->courseDatesAsInstructor()->save($coursedate);
 
@@ -31,7 +31,7 @@ class CoursedatesTableSeeder extends Seeder {
 			$coursedate->instructor_id	= $instructor->id;
 			$coursedate->start_date 		= '2014-05-07';
 			$coursedate->end_date 			= '2014-06-19';
-			$coursedate->quorum 				= 15;
+			$coursedate->quorum 				= 13;
 
 			$classroom->coursedates()->save($coursedate);
 
@@ -41,7 +41,7 @@ class CoursedatesTableSeeder extends Seeder {
 			$coursedate->instructor_id	= $instructor->id;
 			$coursedate->start_date 		= '2014-09-02';
 			$coursedate->end_date 			= '2014-09-23';
-			$coursedate->quorum 				= 10;
+			$coursedate->quorum 				= 18;
 
 			$course->coursedates()->save($coursedate);
 		}
