@@ -1,4 +1,6 @@
+/.sass-cache/
 /bootstrap/compiled.php
+/public/css
 /vendor
 composer.phar
 composer.lock
