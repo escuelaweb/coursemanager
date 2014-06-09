@@ -15,4 +15,9 @@ class BaseController extends Controller {
 		}
 	}
 
+	public function hello()
+	{
+		return View::make('hello');
+	}
+
 }

@@ -10,11 +10,7 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
-Route::get('/', function()
-{
-	echo App::environment();
-});
+Route::get('/', array('as' => 'home', 'uses' => 'BaseController@hello'));
 
 Route::resource('roles', 'RolesController');
 Route::resource('users', 'UsersController');
