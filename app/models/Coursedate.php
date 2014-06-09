@@ -35,4 +35,9 @@ class Coursedate extends Ardent {
 	public function students() {
 		return $this->hasMany('CoursedateUser');
 	}
+
+	public function countStudents()
+	{
+		return $this->students->count();
+	}
 }

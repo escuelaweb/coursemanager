@@ -7,7 +7,6 @@ class CoursedatesTableSeeder extends Seeder {
 
 	public function run()
 	{
-		$faker 			= Faker::create();
 		$instructor	= Role::where('label', '=', 'admin')->with('users')->first()->users()->first();
 		$classroom	= Classroom::first();
 
@@ -41,7 +40,7 @@ class CoursedatesTableSeeder extends Seeder {
 			$coursedate->instructor_id	= $instructor->id;
 			$coursedate->start_date 		= '2014-09-02';
 			$coursedate->end_date 			= '2014-09-23';
-			$coursedate->quorum 				= 18;
+			$coursedate->quorum 				= 15;
 
 			$course->coursedates()->save($coursedate);
 		}

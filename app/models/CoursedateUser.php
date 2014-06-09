@@ -5,6 +5,8 @@ use LaravelBook\Ardent\Ardent;
 class CoursedateUser extends Ardent {
 	protected $fillable = [];
 
+	protected $table = 'coursedate_user';
+
 	/**
 	 * Ardent validation rules
 	 *
@@ -26,5 +28,17 @@ class CoursedateUser extends Ardent {
 
 	public function user() {
 		return $this->belongsTo('User');
+	}
+
+	public function beforeCreate()
+	{
+		if($this->coursedate->countStudents() < $this->coursedate->quorum)
+		{
+			return true;	
+		}
+		else
+		{
+			return false;
+		}		
 	}
 }
