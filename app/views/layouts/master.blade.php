@@ -9,8 +9,7 @@
 
 	
   @section('stylesheets')
-  <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-theme.min.css')}}">
+  <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-darkly-theme.css')}}">
   @show
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
